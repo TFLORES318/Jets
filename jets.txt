@@ -1,0 +1,5 @@
+CargoPlane, Interceptor, 500.75, 10000, 400000
+CargoPlane, SpyJet, 760.6, 8700, 760000
+FighterJet, Thunderbolt, 900.40, 9000, 950000
+FighterJet, BlackBird, 850.95, 11100, 1600000
+FighterJet, LockHeed, 920.21, 8500, 6500000
