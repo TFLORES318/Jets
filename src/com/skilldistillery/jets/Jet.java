@@ -27,8 +27,9 @@ public abstract class Jet {
 	}
 
 	public void fly() {
-		System.out.println(" model=" + model + ", name=" + name + ", speed=" + speed + ", range=" + range + ", price="
-				+ price + " flight time before fuel is gone " + jetFlightTimePerFuel() + " hours and mach speed is " +speedInMach());
+		System.out.println(model + " " + name + " flies with a speed of " + speed + " mph, a range of " + range
+				+ " and it is priced at " + price + ". The flight time before the fuel needs a refill is "
+				+ jetFlightTimePerFuel() + " hours and it's mach speed is " + speedInMach());
 	}
 
 	public double jetFlightTimePerFuel() {

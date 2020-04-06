@@ -18,18 +18,18 @@ public class JetsApplication {
 
 	public void displayUserMenu() {
 		while (true) {
-		System.out.println("Please choose from the menu below:");
-		System.out.println("1. List fleet");
-		System.out.println("2. Fly all jets");
-		System.out.println("3. View fastest jet");
-		System.out.println("4. View jet with longest range");
-		System.out.println("5. Load all cargo jets");
-		System.out.println("6. Dogfight!");
-		System.out.println("7. Add jet to fleet");
-		System.out.println("8. Remove a jet from fleet");
-		System.out.println("9. Quit");
-		
-		int selection = kb.nextInt();
+			System.out.println("Please choose from the menu below:");
+			System.out.println("1. List fleet");
+			System.out.println("2. Fly all jets");
+			System.out.println("3. View fastest jet");
+			System.out.println("4. View jet with longest range");
+			System.out.println("5. Load all cargo jets");
+			System.out.println("6. Dogfight!");
+			System.out.println("7. Add jet to fleet");
+			System.out.println("8. Remove a jet from fleet");
+			System.out.println("9. Quit");
+
+			int selection = kb.nextInt();
 			switch (selection) {
 			case 1:
 				airField.listFleet();
