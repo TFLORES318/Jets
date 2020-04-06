@@ -57,11 +57,12 @@ public class AirField {
 			System.out.println(jet);
 		}
 	}
+
 	public void flyAllJets() {
-		for (Jet jet: jets) {
+		for (Jet jet : jets) {
 			jet.fly();
 		}
-	}		
+	}
 
 	public void viewFastestJet() {
 		Jet jetFast = jets.get(0);
@@ -70,7 +71,7 @@ public class AirField {
 			Jet currentJet = jets.get(indexSpot);
 			if (jets.get(indexSpot) == null) {
 				break;
-				} else if (currentJet.getSpeed() > jetFast.getSpeed()) {
+			} else if (currentJet.getSpeed() > jetFast.getSpeed()) {
 				jetFast = currentJet;
 			}
 		}
@@ -96,8 +97,8 @@ public class AirField {
 		for (indexSpot = 0; indexSpot < jets.size(); indexSpot++) {
 			Jet currentJet = jets.get(indexSpot);
 			if (currentJet instanceof CargoPlane) {
-			((CargoPlane) currentJet).loadCargo();
-		}
+				((CargoPlane) currentJet).loadCargo();
+			}
 		}
 
 	}
@@ -111,18 +112,31 @@ public class AirField {
 			}
 		}
 	}
-	
+
 	public void addJetToAirField(Jet newJet) {
 		jets.add(newJet);
-	}
-	
-	public void removeJetFromFleet() {
-//	int indexSpot = 0;
-//	int counter = 0;
-//	for (indexSpot = 0; indexSpot < jets.size(); indexSpot++) {
-//		Jet currentJet = jets.get(indexSpot).add();
-//		counter++;
-//		System.out.println(indexSpot + ": " +currentJet);
-	}
+		System.out.println(newJet + " has been added to the fleet.");
+		System.out.println("All jets in the fleet are as follows:");
+		for (Jet jet : jets) {
+			System.out.println(jet);
+		}
 	}
 
+	public void removeJetFromFleet() {
+		int counter = 1;
+		for (int indexSpot = 0; indexSpot < jets.size(); indexSpot++) {
+			Jet currentJet = jets.get(indexSpot);
+			System.out.println(counter + ": " + currentJet);
+			counter++;
+		}
+	}
+
+	public void removeJetChosenFromAirField(int choice) {
+		System.out.println("Jet number " + choice + " has been removed from the fleet.");
+		jets.remove(choice - 1);
+		System.out.println("All jets in the fleet are as follows:");
+		for (Jet jet : jets) {
+			System.out.println(jet);
+		}
+	}
+}
